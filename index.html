@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ville de Québec - Accueil</title>
+</head>
+<body>
+
+    <header>
+        <center><h1>Bienvenue à Québec</h1></center>
+
+        <!-- Menu avec liens -->
+        <nav>
+            <table width="100%">
+                <tr>
+                    <td align="right">
+                        <a href="index.html">Accueil</a> |
+                        <a href="histoire.html">Histoire</a> |
+                        <a href="activites.html">Activités</a>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+
+    <main>
+        <section margin-left=20px;>
+            <h2>Découvrez Québec</h2>
+            <p>Située sur les rives du fleuve Saint-Laurent, Québec est l'une des plus anciennes villes d'Amérique du Nord. Avec son riche patrimoine historique et culturel, ses paysages pittoresques et son atmosphère chaleureuse, Québec est une destination incontournable.</p>
+            <div id="slideshow">
+                <figure class="slide">
+                    <img src="img/paysage-nuit.jpg" alt="Vue de la ville de Québec en soirée" width="1150" height="400">
+                    <figcaption>Source: Site de la ville de Québec</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/Chateau_Frontenac_Quebec_city_Canada.jpg" alt="Chateau Frontenac" width="1150" height="400">
+                    <figcaption>Source: Site de la ville de québec</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/quebec-dusk.jpg" alt="Fort de Québec" width="1150" height="400">
+                    <figcaption>Source: about-quebec.com</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/RuedeQuebec.jpg" alt="Rue de Québec" width="1150" height="400">
+                    <figcaption>Source: quebeclemag.com</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/vieux_port_marina.jpg" alt="Vieux port de Québec" width="1150" height="400">
+                    <figcaption>Source: quebec-cite.com</figcaption>
+                </figure>
+                <!-- Ajout des boutons pour navigation -->
+                <div align="center">
+                    <button onclick="previousSlide()">Précédent</button>
+                    <button onclick="nextSlide()">Suivant</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des événements locaux -->
+    <h1>Pétite histoire du Québec</h1>
+
+    <table border="0" width="80%" align="center">
+        <tr>
+            <!-- Colonne gauche avec les filtres de recherche -->
+            <td width="50%">
+                <p margin-left=20px;>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Québec est une ville située sur le fleuve Saint-Laurent, dans la province canadienne essentiellement francophone de Québec. Fondée en 1608, elle comprend un centre colonial fortifié, le Vieux-Québec et la place Royale, avec des bâtiments en pierre et des rues étroites. Ce quartier abrite également l'hôtel Château Frontenac et l'imposante Citadelle de Québec. Les rues pavées du Petit-Champlain sont bordées de bistrots et de boutiques.</p>
+            </td>
+
+            <!-- Colonne droite avec les événements listés -->
+            <td width="50%">
+                <p> <img src="img/carte-quebec-canada.jpg" alt="Carte de Québec" width="400" height="300"> </p>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- Section des élus locaux -->
+    <h2>Personnalités publiques</h2>
+
+    <table border="0" width="100%">
+        <tr>
+            <td align="center">
+                <img src="img/personnalites/legault.jpeg" alt="Eric Adams" width="80" height="80">
+                <p>François Legault<br><b>Premier ministre du Québec</b></p>
+            </td>
+            <td align="center">
+                <img src="img/personnalites/maire.jpeg" alt="Brad Lander" width="80" height="80">
+                <p>Bruno Marchand<br><b>Maire de Québec</b></p>
+            </td>
+            <td align="center">
+                <img src="img/personnalites/Blanchet.jpeg" alt="Adrienne Adams" width="80" height="80">
+                <p>Blanchet, Yves-François<br><b>Député</b></p>
+            </td>
+            <td align="center">
+                <img src="img/personnalites/Blanchette.jpeg" alt="Jumaane Williams" width="80" height="80">
+                <p>Blanchette-Joncas, Maxime<br><b>Député</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <img src="img/personnalites/Brunelle.jpeg" alt="Vanessa Gibson" width="80" height="80">
+                <p>Brunelle-Duceppe, Alexis<br><b>Député</b></p>
+            </td>
+            <td align="center">
+                <img src="img/personnalites/Chabot.jpeg" alt="Antonio Reynoso" width="80" height="80">
+                <p>Louise Chabot<br><b>Député</b></p>
+            </td>
+            <td align="center">
+                <img src="img/personnalites/Michael.jpeg" alt="Mark Levine" width="80" height="80">
+                <p>Michael Sabia<br><b>DG Hydro-Québec</b></p>
+            </td>
+            <td align="center">
+                <img src="img/personnalites/Rene.jpeg" alt="Donovan Richards" width="80" height="80">
+                <p>René Dufresne<br><b>PDG Retraite Québec</b></p>
+            </td>
+        </tr>
+    </table>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+		<p align="center" > <img src="img/drapeauquebec.png" alt="Couleurs du Québec" width="80" height="40"> <font color="green">&copy; 2024 Québec, Canada</font></p>
+	</footer>
+
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide() {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            showSlide();
+        }
+
+        function previousSlide() {
+            index = (index - 1 + totalSlides) % totalSlides;
+            showSlide();
+        }
+
+        setInterval(nextSlide, 5000); // Change d'image automatiquement toutes les 5 secondes
+        showSlide(); // Affiche la première image
+    </script>
+
+</body>
+</html>

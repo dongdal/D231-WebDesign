@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ville de Québec - Accueil</title>
+</head>
+<body>
+
+    <header>
+        <center><h1>Bienvenue à Québec</h1></center>
+
+        <!-- Menu avec liens -->
+        <nav>
+            <table width="100%">
+                <tr>
+                    <td align="right">
+                        <a href="index.html">Accueil</a> |
+                        <a href="histoire.html">Histoire</a> |
+                        <a href="activites.html">Activités</a>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Découvrez les meilleures activités à faire à Québec</h2>
+        
+        <!-- Diaporama des activités touristiques -->
+        <section margin-left=20px;>
+            <div id="slideshow" margin-left=60px;>
+                <div class="slide" id="slide1">
+                    <h3>1. Visite du Vieux-Québec</h3>
+                    <img src="img/personnalites/fondateurs/vieux-quebec.jpg" alt="Vieux-Québec" width="1000" height="400">
+                    <p>Le Vieux-Québec est un incontournable avec ses rues pavées, ses bâtiments historiques et ses boutiques charmantes. C’est un quartier classé au patrimoine mondial de l'UNESCO.</p>
+                    <p>À ne pas manquer : la Place Royale, la Basilique-cathédrale Notre-Dame de Québec, et les fortifications de la ville.</p>
+                </div>
+
+                <div class="slide" id="slide2" style="display:none;">
+                    <h3>2. Château Frontenac</h3>
+                    <img src="img/personnalites/fondateurs/chateau_frontenac.jpeg" alt="Château Frontenac" width="1000" height="400">
+                    <p>Monument emblématique de Québec, le Château Frontenac domine la ville. Vous pouvez faire une visite guidée de cet hôtel mythique.</p>
+                    <p>Conseil : Prenez une photo depuis la terrasse Dufferin pour une vue panoramique impressionnante !</p>
+                </div>
+
+                <div class="slide" id="slide3" style="display:none;">
+                    <h3>3. Chutes Montmorency</h3>
+                    <img src="img/personnalites/fondateurs/chutes_montmorency.jpeg" alt="Chutes Montmorency" width="1000" height="400">
+                    <p>Les Chutes Montmorency sont plus hautes que les célèbres chutes du Niagara. Vous pouvez prendre un téléphérique pour admirer la vue.</p>
+                    <p>Idéal pour les amateurs de randonnée et de nature !</p>
+                </div>
+
+                <div class="slide" id="slide4" style="display:none;">
+                    <h3>4. Excursion sur le fleuve Saint-Laurent</h3>
+                    <img src="img/personnalites/fondateurs/croisiere.jpeg" alt="Croisière sur le Saint-Laurent" width="1000" height="400">
+                    <p>Découvrez Québec depuis le fleuve avec une croisière sur le Saint-Laurent.</p>
+                </div>
+
+                <div class="slide" id="slide5" style="display:none;">
+                    <h3>5. Carnaval de Québec</h3>
+                    <img src="img/personnalites/fondateurs/carnaval.jpeg" alt="Carnaval de Québec" width="1000" height="400">
+                    <p>Le Carnaval de Québec propose des parades, des sculptures de glace, et bien d'autres activités hivernales.</p>
+                </div>
+            </div>
+
+            <p align="center">
+                <button onclick="previousSlide()">&#10094; Précédent</button>
+                <button onclick="nextSlide()">Suivant &#10095;</button>
+            </p>
+        </section>
+
+        <!-- Section des événements locaux -->
+    <h1>Pétite histoire du Québec</h1>
+
+    <table border="0" width="90%" align="center">
+        <tr>
+            <td width="30%">
+                <p> <img src="img/carte-quebec.jpg" alt="Carte de Québec" width="400" height="300"> </p>
+            </td>
+            <td width="50%">
+                <p margin-left=20px;>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Québec est une destination fascinante pour les touristes, avec une richesse historique, culturelle et naturelle. Le Vieux-Québec, classé au patrimoine mondial de l'UNESCO, est un incontournable avec ses rues pavées, ses fortifications et ses monuments emblématiques comme la Place Royale et le Château Frontenac. La promenade sur la terrasse Dufferin offre une vue panoramique spectaculaire sur le fleuve Saint-Laurent.
+
+                <br>Les Chutes Montmorency, situées à quelques minutes de la ville, impressionnent par leur hauteur supérieure à celle des chutes du Niagara. En été, les visiteurs peuvent explorer l'Île d'Orléans, un joyau naturel avec des paysages pittoresques, des vergers et des produits locaux artisanaux. Pour une immersion culturelle, ne manquez pas les musées comme le Musée de la civilisation et les galeries d'art du Petit Champlain.
+
+                <br>En hiver, Québec se transforme en un véritable pays des merveilles avec le Carnaval de Québec, l'un des plus grands festivals d'hiver au monde, proposant des parades, des sculptures de glace et de nombreuses activités hivernales. Les amateurs de nature apprécieront également une randonnée dans le Parc de la Jacques-Cartier, célèbre pour ses paysages montagneux et ses activités en plein air comme la raquette ou le canoë.
+
+                <br>Enfin, une croisière sur le fleuve Saint-Laurent permet de découvrir la ville sous un autre angle et d'admirer ses magnifiques panoramas.</p>
+            </td>
+        </tr>
+    </table>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p align="center" > <img src="img/drapeauquebec.png" alt="Couleurs du Québec" width="80" height="40"> <font color="green">&copy; 2024 Québec, Canada</font></p>
+    </footer>
+
+<!-- JavaScript pour les slides -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        function previousSlide() {
+            slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        // Initialiser la première slide
+        showSlide(slideIndex);
+    </script>
+
+</body>
+</html>
