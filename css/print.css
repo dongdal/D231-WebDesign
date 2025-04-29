@@ -1,0 +1,32 @@
+/* Fichier CSS pour l'impression */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+}
+
+header, footer, nav, button {
+    display: none;
+}
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+
+p {
+    margin: 0.5em 0;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    padding: 1em;
+}

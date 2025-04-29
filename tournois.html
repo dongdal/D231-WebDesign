@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le ski - Hiver</title>
+
+    <!-- Lien vers les fichiers CSS -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+</head>
+<body>
+
+    <header>
+        <h1>Le ski et ses tournois</h1>
+        <img src="img/logo-ski.png" alt="logo-ski" align="left" width="200" height="160">
+        <nav>
+            <div class="menu">
+                <a href="index.html" class="menu-button">Accueil</a>
+                <a href="equipements.html" class="menu-button">Equipements</a>
+                <a href="tournois.html" class="menu-button">Tournoirs</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Découvrez les trois grandes compétitions de ski au monde</h2>
+        
+        <section>
+            <div id="slideshow">
+                <div class="slide">
+                    <h3>1. Jeux Olympiques d'Hiver</h3>
+                    <img src="img/jeuxolympique.png" alt="Vieux-Québec" class="slideshow-image">
+                    <p>Le ski est une discipline phare des Jeux Olympiques depuis 1936, avec des épreuves variées comme le ski alpin, le ski de fond et le ski acrobatique. Ces compétitions attirent les meilleurs athlètes du monde, offrant un spectacle unique.</p>
+                </div>
+                <div class="slide" style="display:none;">
+                    <h3>2. Coupe du Monde de Ski Alpin</h3>
+                    <img src="img/coupedumonde.png" alt="Château Frontenac" class="slideshow-image">
+                    <p>Organisée par la FIS depuis 1967, cette compétition se déroule sur une saison entière, avec des épreuves comme la descente, le slalom et le Super G. Les skieurs accumulent des points pour remporter le globe de cristal.</p>
+                </div>
+                <div class="slide" style="display:none;">
+                    <h3>3. Championnats du Monde de Ski Alpin</h3>
+                    <img src="img/championatdumonde.png" alt="Chutes Montmorency" class="slideshow-image">
+                    <p>Ces championnats biennaux rassemblent les meilleurs skieurs pour concourir dans des disciplines similaires à la Coupe du Monde. Ils sont un événement prestigieux pour les athlètes et les fans.</p>
+                </div>
+            </div>
+            <div>
+                <button onclick="previousSlide()">&#10094; Précédent</button>
+                <button onclick="nextSlide()">Suivant &#10095;</button>
+            </div>
+        </section>
+
+        <h1>Petite histoire sur les tournois de ski</h1>
+
+        <section>
+            <h2>Évolution des tournois de ski</h2>
+            <p>
+                Les tournois de ski remontent à plusieurs décennies et témoignent de l'évolution de ce sport spectaculaire. Les premiers Jeux Olympiques d'hiver en 1924 ont marqué un tournant en intégrant le ski comme discipline majeure, rassemblant les meilleurs athlètes du monde. La Coupe du Monde de Ski Alpin, lancée en 1967, a permis de structurer une compétition annuelle prestigieuse, mettant en lumière des talents exceptionnels. Plus récemment, les X Games d'hiver ont donné au ski freestyle une plateforme unique pour émerger, attirant un public jeune et dynamique. Les tournois de ski incarnent ainsi non seulement la compétition, mais aussi l'innovation et l'esprit de communauté autour de la montagne.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p><img src="img/cmr.png" alt="Couleurs du Cameroun" width="20" height="12"> &copy; 2024 Dalton DONGMO KEMETIO</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        let slides;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            slides = document.querySelectorAll('.slide');
+            showSlide(slideIndex);
+        });
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function previousSlide() {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex);
+        }
+    </script>
+</body>
+</html>

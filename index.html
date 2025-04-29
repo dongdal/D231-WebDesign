@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Ski dans toute sa splendeur</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+    <header>
+        <h1 align="center">Le Ski dans toute sa splendeur</h1>
+        <img src="img/logo-ski.png" alt="logo-ski" align="left" width="200" height="160">
+        <nav>
+            <div class="menu">
+                <a href="index.html" class="menu-button">Accueil</a>
+                <a href="equipements.html" class="menu-button">Equipements</a>
+                <a href="tournois.html" class="menu-button">Tournoirs</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Origine du Ski</h2>
+            <p>Le ski, tel que nous le connaissons aujourd'hui, a des origines anciennes qui remontent à plusieurs millénaires. Les premières traces de skis ont été découvertes en Russie et datent de plus de 6 000 ans. Ces premiers skis étaient utilisés principalement pour se déplacer dans les régions enneigées pendant l'hiver. Les peuples scandinaves et sibériens ont également une longue tradition de ski, utilisant ces outils pour la chasse et le transport.</p>
+            <div id="slideshow">
+                <figure class="slide">
+                    <img src="img/Advanced-Skiing-scaled.jpg" alt="Vue de la ville de Québec en soirée" >
+                    <figcaption>Source: https://www.mamanpourlavie.com/loisirs-creatifs/sports/3888-le-ski-alpin.thtml</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/1st-timer-guide-to-ski-snowboard.jpg" alt="Chateau Frontenac" >
+                    <figcaption>Source: https://www.skisnowvalley.com/learn-to-ski/1st-timer-guide/</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/Atlin-Heli-Ski-Emilie-Thibeault-Maloney-1280x770-1.jpg" alt="Fort de Québec" >
+                    <figcaption>Source: https://salutcanada.ca/listings/atlin-heli-ski-ltd/</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/les-differents-types-de-skis-conseils.jpg" alt="Rue de Québec" >
+                    <figcaption>Source: https://fr.prosneige.fr/info/les-differents-types-de-skis/</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="img/Ski-alpin-et-preparation-physique.jpg" alt="Vieux port de Québec" >
+                    <figcaption>Source: https://oppq.qc.ca/blogue/ski-alpin-et-preparation-physique/</figcaption>
+                </figure>
+                <!-- Ajout des boutons pour navigation -->
+                <div>
+                    <button onclick="previousSlide()">Précédent</button>
+                    <button onclick="nextSlide()">Suivant</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="two-columns">
+                <!-- Colonne gauche avec l'image -->
+                <div class="column-left">
+                    <p><img src="img/carte-ski.jpg" alt="Carte du monde montrant les zones où le ski est pratiqué" width="800" height="300"></p>
+                </div>
+                <!-- Colonne droite avec le texte -->
+                <div class="column-right">
+                    <h2>Petite histoire sur le ski</h2>
+                    <p>Le ski, tel que nous le connaissons aujourd'hui, a des origines anciennes qui remontent à plusieurs millénaires. Les premières traces de skis ont été découvertes en Russie et datent de plus de 6 000 ans. Ces premiers skis étaient utilisés principalement pour se déplacer dans les régions enneigées pendant l'hiver. Les peuples scandinaves et sibériens ont également une longue tradition de ski, utilisant ces outils pour la chasse et le transport. C'est au XIXe siècle que le ski a commencé à évoluer en tant que sport de loisirs et de compétition. Les pionniers du ski moderne, tels que Sondre Norheim en Norvège, ont développé des techniques et des équipements qui ont permis de transformer cette pratique utilitaire en un sport dynamique et passionnant. Aujourd'hui, le ski est pratiqué dans le monde entier et englobe diverses disciplines, des courses alpines rapides aux descentes extrêmes en freeride.</p>
+                </div>
+            </div>
+            <p>Québec est une ville située sur le fleuve Saint-Laurent, dans la province canadienne essentiellement francophone de Québec. Fondée en 1608, elle comprend un centre colonial fortifié, le Vieux-Québec et la place Royale, avec des bâtiments en pierre et des rues étroites. Ce quartier abrite également l'hôtel Château Frontenac et l'imposante Citadelle de Québec. Les rues pavées du Petit-Champlain sont bordées de bistrots et de boutiques. Le ski fait partie intégrante de l'activité des habitants et des touristes pendant toute la période hivernale.</p>
+        </section>
+
+        <section id="images-container">
+            <h2>Quelques images</h2>
+            <div>
+                <img src="img/Ski-alpin-et-preparation-physique.jpg" alt="Préparation physique pour le ski alpin"> 
+                <img src="img/les-differents-types-de-skis-conseils.jpg" alt="Différents types de skis">
+                <img src="img/blue-mountain-resort-skiing.jpg" alt="Station de ski Blue Mountain">
+                <img src="img/1st-timer-guide-to-ski-snowboard.jpg" alt="Guide pour les débutants en ski et snowboard">
+            </div>
+            <div>
+                <img src="img/m-header-ski-alpin.jpg" alt="Ski alpin">
+                <img src="img/Advanced-Skiing-scaled.jpg" alt="Ski avancé">
+                <img src="img/1st-timer-guide-to-ski-snowboard.jpg" alt="Guide pour les débutants en ski et snowboard">
+                <img src="img/Atlin-Heli-Ski-Emilie-Thibeault-Maloney-1280x770-1.jpg" alt="Guide pour les débutants en ski et snowboard">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><img src="img/cmr.png" alt="Couleurs du Cameroun" width="20" height="12"> &copy; 2024 Dalton DONGMO KEMETIO</p>
+    </footer>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide() {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            showSlide();
+        }
+
+        function previousSlide() {
+            index = (index - 1 + totalSlides) % totalSlides;
+            showSlide();
+        }
+
+        setInterval(nextSlide, 5000); // Change d'image automatiquement toutes les 5 secondes
+        showSlide(); // Affiche la première image
+    </script>
+
+</body>
+</html>

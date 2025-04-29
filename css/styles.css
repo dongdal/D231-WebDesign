@@ -1,0 +1,201 @@
+/* Fichier CSS pour l'affichage à l'écran */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+nav div {
+    margin: 0.5em 0;
+    text-align: right;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;           /* Ajustement du padding pour le bouton */
+    margin: 0.5em;                /* Espacement entre les boutons */
+    background-color: #4CAF50;    /* Couleur de fond */
+    border-radius: 25px;          /* Bords arrondis */
+    font-size: 16px;              /* Taille de la police */
+    display: inline-block;        /* Pour les rendre des éléments en ligne */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #45a049;    /* Changer la couleur au survol */
+    transform: scale(1.1);         /* Agrandir légèrement le bouton au survol */
+}
+
+main {
+    padding: 2em;
+}
+
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #555;
+}
+
+p {
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #005f6b;
+}
+
+/* Mise à jour pour le diaporama */
+#slideshow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#slideshow .slide img {
+    width: 80%; /* L'image prend 80% de la largeur de l'écran */
+    height: 1900; /* Conserver les proportions de l'image */
+    display: block; /* Permet de centrer l'image */
+    margin: 0 auto; /* Centrer l'image horizontalement */
+}
+
+/* Boutons de navigation du diaporama */
+#slideshow button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#slideshow button:hover {
+    background-color: #45a049;
+}
+
+/* Facultatif : ajout d'un espace autour de la légende */
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.equipment-nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Pour rester sur une ligne */
+    gap: 1em;
+}
+
+.equipment-nav .equipment-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.equipment-info {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Espace entre les deux */
+}
+
+.equipment-info p {
+    flex: 1;
+    width: 50%;
+    margin: 0; /* Optionnel : enlève l'espace par défaut */
+}
+
+.equipment-info .equipment-image-container {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    justify-content: center; /* Centre l'image dans son conteneur */
+}
+
+.equipment-info .equipment-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.slideshow-image {
+    width: 400px;       /* Largeur fixe pour toutes les images du slideshow */
+    height: 250px;      /* Hauteur fixe pour toutes les images du slideshow */
+    object-fit: cover;  /* Ajuster l'image sans déformation */
+    border-radius: 10px; /* Coins arrondis pour un style plus doux */
+    margin-bottom: 1em; /* Espace entre l'image et le texte */
+}
+
+.two-columns {
+    display: flex;
+    flex-wrap: wrap;         /* Permet de passer en colonne sur petit écran */
+    gap: 2em;                /* Espace entre les colonnes */
+    align-items: flex-start; /* Aligner le haut des colonnes */
+    margin-top: 2em;
+}
+
+.column-left, .column-right {
+    flex: 1;                 /* Chaque colonne prend la moitié de l'espace */
+    min-width: 300px;        /* Largeur minimale pour éviter les colonnes trop étroites */
+}
+
+.column-left img {
+    width: 100%;             /* Pour que l’image s’ajuste à la colonne */
+    height: auto;
+    border-radius: 8px;
+}
+
+section#images-container h2 {
+    text-align: center; /* Centrer le titre */
+    margin-bottom: 1em;
+}
+
+section#images-container div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    gap: 1em; /* Espace entre les images */
+    margin-bottom: 2em;
+}
+
+section#images-container img {
+    width: 100%; /* Les images remplissent la colonne */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Garde les proportions et découpe si nécessaire */
+    border-radius: 8px; /* Bords arrondis pour les images */
+}
